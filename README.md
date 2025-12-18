@@ -254,8 +254,8 @@ git config --global --list
 Download the shared project to your computer.
 
 ```bash
-git clone <REPOSITORY_URL>
-cd <REPOSITORY_NAME>
+git clone https://github.com/PeerAbitbul/john_bryce_92991.git
+cd john_bryce_92991
 ```
 
 **Example:**
@@ -818,8 +818,8 @@ git config --global --list
 הורידו את הפרויקט המשותף למחשב שלכם.
 
 ```bash
-git clone <REPOSITORY_URL>
-cd <REPOSITORY_NAME>
+git clone https://github.com/PeerAbitbul/john_bryce_92991.git
+cd john_bryce_92991
 ```
 
 **דוגמה:**
