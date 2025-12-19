@@ -220,7 +220,66 @@ print(f"{number_list[2]:<{width}}|{number_list[2]*number_list[2]:<{width}}|{numb
 #------------------------------------------------------------------------------------------------
 #------------------------------------------------------------------------------------------------
 
-# Ex 15:
-print("Ex 15: ")
+# Ex 15: Calculate the area of a right-angled triangle
+print("Ex 15: Calculate the area of a right-angled triangle")
 
-num = int(input("Enter a number: "))
+side_a = float(input("Enter a number for triangle: "))
+side_b = float(input("Enter b number for triangle: "))
+
+area = (side_a * side_b) / 2
+print(f"The area of the triangle is: {area}")
+
+#------------------------------------------------------------------------------------------------
+#------------------------------------------------------------------------------------------------
+# Ex 16: Extract TAX amount from total price
+print("Ex 16: Extract TAX amount from total price")
+
+tax_percentage = 0.18
+total_price = float(input("Enter the total price: "))
+result = total_price / (1 + tax_percentage)
+result = total_price - result
+print(f"The TAX amount is: {result:.2f}") #give alot of numbers after the decimal point
+
+
+result = float(input("Enter the total price: "))
+result = result * (0.18 / 1.18) 
+print(f"The TAX amount is: {result:.2f}")
+
+
+#------------------------------------------------------------------------------------------------
+#------------------------------------------------------------------------------------------------
+
+# Ex 17: Calculate the price with TAX
+print("Ex 17: Calculate the price with TAX")
+
+result = float(input("Enter the price without TAX: "))
+result = result * 1.18
+print(f"The price with TAX is: {result:.2f}")
+
+
+#------------------------------------------------------------------------------------------------
+#------------------------------------------------------------------------------------------------
+# Ex 18: Calculate the net price and TAX amount
+print("Ex 18: Calculate the net price and TAX amount")
+
+price = float(input("Enter the total price: "))
+net = price / 1.18
+print(f"The net price is: {net:.2f} and the TAX amount is: {price - net:.2f}")
+
+
+#------------------------------------------------------------------------------------------------
+#------------------------------------------------------------------------------------------------
+# Ex 19: Calculate the net price and TAX amount using ONLY one variable
+print("Ex 19: Calculate the net price and TAX amount using ONLY one variable")
+
+result = float(input("Enter the total price: "))
+print(f"Net: {result / 1.18:.2f}, TAX: {result - (result / 1.18):.2f}")
+
+
+#------------------------------------------------------------------------------------------------
+#------------------------------------------------------------------------------------------------
+# Ex 20: Calculate the average of a list of numbers
+print("Ex 20: Calculate the average of a list of numbers")
+
+tested = [100,60,70,95,81]
+print(sum(tested) / len(tested))
