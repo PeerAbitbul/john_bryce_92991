@@ -96,7 +96,7 @@ Save and exit.
 
 ### Check Status
 ```bash
-git status
+git status -u
 ```
 Files appear in **red** (Untracked).
 
@@ -900,7 +900,7 @@ cat YourName_config.json
 
 ### בדיקת מצב
 ```bash
-git status
+git status -u
 ```
 הקבצים יופיעו **באדום** (Untracked).
 
