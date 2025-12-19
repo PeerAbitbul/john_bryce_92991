@@ -1,0 +1,226 @@
+#python basics
+#------------------------------------------------------------------------------------------------
+#------------------------------------------------------------------------------------------------
+
+# Ex 1-2: Basic math with 6 and 2
+print("Ex 1-2: Basic math with 6 and 2")
+
+x = 6
+y = 2
+
+print(x + y)
+print(x - y)
+print(x * y)
+print(x / y)
+print(x // y)
+print(x % y)
+
+#------------------------------------------------------------------------------------------------
+#------------------------------------------------------------------------------------------------
+
+
+# Ex 3: Math with 2 and 0.5
+print("Ex 3: Math with 2 and 0.5")
+
+# x = 2
+y = 5
+print(x / y)
+print(x // y)
+print(x % y)
+
+#------------------------------------------------------------------------------------------------
+#------------------------------------------------------------------------------------------------
+
+# Ex 4: Using 6 variables (a, b, c, d, e, f)
+print("Ex 4: Using 6 variables (a, b, c, d, e, f)")
+
+a = -81
+b = 10
+c = a + b   
+d = a - b  
+e = a * b  
+f = int(a / b) 
+
+print(a)
+print(b)
+print(c)
+print(d)
+print(e)
+print(f)
+
+#------------------------------------------------------------------------------------------------
+#------------------------------------------------------------------------------------------------
+
+# Ex 5: Printing results in a table
+print("Ex 5: Printing results in a table")
+
+width = 5
+print(f"{'a':<{width}}|{'b':<{width}}|{'c=a+b':<{width}}|{'d=a-b':<{width}}|{'e=a*b':<{width}}|{'f=a/b':<{width}}")
+print("-" * 65)
+print(f"{a:<{width}}|{b:<{width}}|{c:<{width}}|{d:<{width}}|{e:<{width}}|{f:<{width}}")
+print("-----------------------------------------------------------------")
+
+#------------------------------------------------------------------------------------------------
+#------------------------------------------------------------------------------------------------
+
+# Ex 6: Table using only 'c' for results
+print("Ex 6: Table using only 'c' for results")
+
+a = -81
+b = 10
+c = a + b
+
+print(f"{a:<{width}}|", end="")
+print(f"{b:<{width}}|", end="")
+
+print(f"{c:<{width}}|", end="")
+
+c = a - b
+print(f"{c:<{width}}|", end="")
+
+c = a * b
+print(f"{c:<{width}}|", end="")
+
+c = a / b
+print(f"{c:<{width}}", end="")
+
+
+print("\n ----------------------------------------------------------------")
+
+#------------------------------------------------------------------------------------------------
+#------------------------------------------------------------------------------------------------
+
+# Ex 7: Sum of 3 numbers (3 variables)
+print("Ex 7: Sum of 3 numbers (3 variables)")
+
+num1 = int(input("Enter the first number: "))
+num2 = int(input("Enter the second number: "))
+num3 = int(input("Enter the third number: "))
+
+result = num1 + num2 + num3
+
+print(f"The sum of {num1}, {num2} and {num3} is {result}")
+
+#------------------------------------------------------------------------------------------------
+#------------------------------------------------------------------------------------------------
+
+# Ex 8: Sum of 3 numbers (2 variables)
+print("Ex 8: Sum of 3 numbers (2 variables)")
+
+result = int(input("Enter the first number: "))
+num = int(input("Enter the second number: "))
+result += num
+num = int(input("Enter the third number: "))
+result += num
+
+print(f"The result is {result}")
+
+#------------------------------------------------------------------------------------------------
+#------------------------------------------------------------------------------------------------
+
+# Ex 9: Sum of 5 numbers (2 variables + loop)
+print("Ex 9: Sum of 5 numbers (2 variables + loop)")
+
+result = 0
+counter = 0
+while counter < 5:
+    result += int(input(f"Enter the {counter + 1} number: "))
+    counter += 1
+
+print(f"The result is {result}")
+
+#------------------------------------------------------------------------------------------------
+#------------------------------------------------------------------------------------------------
+
+# Ex 10: Big calculation (many variables)
+print("Ex 10: Big calculation (many variables)")
+
+result = 0
+a = int(input("Enter nubmer to a variable: "))
+b = int(input("Enter nubmer to b variable: "))
+c = int(input("Enter nubmer to c variable: "))
+d = int(input("Enter nubmer to d variable: "))
+e = int(input("Enter nubmer to e variable: "))
+
+result = (a + b - c) * d / e
+
+print(f"The result is {result}")
+
+#------------------------------------------------------------------------------------------------
+#------------------------------------------------------------------------------------------------
+
+# Ex 11: Big calculation (only 2 variables)
+print("Ex 11: Big calculation (only 2 variables)")
+
+result = int(input("Enter value for a: "))
+
+temp = int(input("Enter value for b: "))
+result += temp
+
+temp = int(input("Enter value for c: "))
+result -= temp  
+
+temp = int(input("Enter value for d: "))
+result *= temp
+
+temp = int(input("Enter value for e: "))
+result /= temp
+
+print(f"The result is {result}")
+
+#------------------------------------------------------------------------------------------------
+#------------------------------------------------------------------------------------------------
+
+# Ex 12: Calculate the square of a number
+print("Ex 12: Calculate the square of a number")
+
+num = int(input("Enter a number: "))
+result = num * num
+print(f"The result is {result} (using *)")
+
+num = int(input("Enter a number: "))
+result = num ** 2
+print(f"The result is {result} (using **)")
+
+#------------------------------------------------------------------------------------------------
+#------------------------------------------------------------------------------------------------
+
+# Ex 13: Calculate the square of a number 
+print("Ex 13: Calculate the square of a number")
+
+num = int(input("Enter a number: "))
+result = num * num
+print(f"The square of {num} is: {result} (using *)")
+
+num = int(input("Enter a number: "))
+result = num ** 2
+print(f"The square of {num} is: {result} (using **)")
+
+#------------------------------------------------------------------------------------------------
+#------------------------------------------------------------------------------------------------
+
+# Ex 14: 
+print("Ex 14: ")
+
+
+
+number_list = []
+for i in range(3):
+    number_list.append(int(input("Enter a number: ")))
+
+width = 5
+print(f"{'x':<{width}}|{'x*x':<{width}}|{'x**2':<{width}}")
+print("-" * 10)
+    
+print(f"{number_list[0]:<{width}}|{number_list[0]*number_list[0]:<{width}}|{number_list[0]**2:<{width}}")     
+print(f"{number_list[1]:<{width}}|{number_list[1]*number_list[1]:<{width}}|{number_list[1]**2:<{width}}")     
+print(f"{number_list[2]:<{width}}|{number_list[2]*number_list[2]:<{width}}|{number_list[2]**2:<{width}}")     
+
+
+#------------------------------------------------------------------------------------------------
+#------------------------------------------------------------------------------------------------
+
+# Ex 15:
+print("Ex 15: ")
+
+num = int(input("Enter a number: "))
