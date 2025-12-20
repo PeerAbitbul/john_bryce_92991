@@ -24,6 +24,7 @@ print("Ex 3: Math with 2 and 0.5")
 
 # x = 2
 y = 5
+
 print(x / y)
 print(x // y)
 print(x % y)
@@ -220,7 +221,124 @@ print(f"{number_list[2]:<{width}}|{number_list[2]*number_list[2]:<{width}}|{numb
 #------------------------------------------------------------------------------------------------
 #------------------------------------------------------------------------------------------------
 
-# Ex 15:
-print("Ex 15: ")
+# Ex 15: Calculate the area of a right-angled triangle
+print("Ex 15: Calculate the area of a right-angled triangle")
 
-num = int(input("Enter a number: "))
+side_a = float(input("Enter a number for triangle: "))
+side_b = float(input("Enter b number for triangle: "))
+
+area = (side_a * side_b) / 2
+print(f"The area of the triangle is: {area}")
+
+#------------------------------------------------------------------------------------------------
+#------------------------------------------------------------------------------------------------
+# Ex 16: Extract TAX amount from total price
+print("Ex 16: Extract TAX amount from total price")
+
+tax_percentage = 0.18
+total_price = float(input("Enter the total price: "))
+result = total_price / (1 + tax_percentage)
+result = total_price - result
+print(f"The TAX amount is: {result:.2f}") #give alot of numbers after the decimal point
+
+
+result = float(input("Enter the total price: "))
+result = result * (0.18 / 1.18) 
+print(f"The TAX amount is: {result:.2f}")
+
+
+#------------------------------------------------------------------------------------------------
+#------------------------------------------------------------------------------------------------
+
+# Ex 17: Calculate the price with TAX
+print("Ex 17: Calculate the price with TAX")
+
+result = float(input("Enter the price without TAX: "))
+result = result * 1.18
+print(f"The price with TAX is: {result:.2f}")
+
+
+#------------------------------------------------------------------------------------------------
+#------------------------------------------------------------------------------------------------
+# Ex 18: Calculate the net price and TAX amount
+print("Ex 18: Calculate the net price and TAX amount")
+
+price = float(input("Enter the total price: "))
+net = price / 1.18
+print(f"The net price is: {net:.2f} and the TAX amount is: {price - net:.2f}")
+
+
+#------------------------------------------------------------------------------------------------
+#------------------------------------------------------------------------------------------------
+# Ex 19: Calculate the net price and TAX amount using ONLY one variable
+print("Ex 19: Calculate the net price and TAX amount using ONLY one variable")
+
+result = float(input("Enter the total price: "))
+print(f"Net: {result / 1.18:.2f}, TAX: {result - (result / 1.18):.2f}")
+
+
+#------------------------------------------------------------------------------------------------
+#------------------------------------------------------------------------------------------------
+# Ex 20: Calculate the average of a list of numbers
+print("Ex 20: Calculate the average of a list of numbers")
+
+tested = [100,60,70,95,81]
+print(sum(tested) / len(tested))
+
+#------------------------------------------------------------------------------------------------
+#------------------------------------------------------------------------------------------------
+# Ex 21: Calculate the salary of a customer
+print("Ex 21: Calculate the salary of a customer")
+
+customer = str(input("Enter the name: "))
+total_price = float(input("Enter the total price: "))
+additional_price = float(input("Enter the additional price: "))
+
+tax = total_price * 0.10
+total_price = total_price - tax + additional_price
+print(f"{customer}'s salary is: {total_price:.2f}")
+
+
+customer = str(input("Enter the name: "))
+total_price = float(input("Enter the total price: "))
+additional_price = float(input("Enter the additional price: "))
+
+total_price = (total_price * 0.90) + additional_price
+print(f"{customer}'s salary is: {total_price:.2f}")
+
+#------------------------------------------------------------------------------------------------
+#------------------------------------------------------------------------------------------------
+
+# Ex 22: Calculate the total price of all fabrics
+print("Ex 22: Calculate the total price of all fabrics")
+
+fabric_prices = {"red": 75, "yellow":80, "green":100, "blue":120} #dictionary
+total_price = 0
+
+for color in fabric_prices:
+    client_meters = int(input(f"Enter the number of meters of {color} fabric: "))
+    client_price = fabric_prices[color] * client_meters
+    print(f"The price of {color} fabric is: {client_price:.2f}")
+    total_price += client_price 
+print(f"The total price of all fabrics is: {total_price:.2f}")
+
+
+#------------------------------------------------------------------------------------------------
+#------------------------------------------------------------------------------------------------
+# Ex 23: Solve the system of equations
+print("Ex 23: Solve the system of equations")
+
+a1,b1,c1 = map(int, input("Enter the three first numbers: ").split())
+#print(a1,b1,c1)
+a2,b2,c2 = map(int, input("Enter the three first numbers: ").split())
+#print(a2,b2,c2)
+
+mone_x = (c1 * b2) - (c2 * b1)
+mone_y = (a1 * c2) - (a2 * c1)
+
+makhane = (a1 * b2) - (a2 * b1)
+
+x = mone_x / makhane
+y = mone_y / makhane
+
+print(f"The solution is: x={x}, y={y}")
