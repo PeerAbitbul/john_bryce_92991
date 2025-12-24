@@ -58,3 +58,61 @@ print(f"Last element: {L1[-1]}") # 3
 unsorted_list = [10, 2, 8, 1]
 unsorted_list.sort()
 print(f"Sorted list: {unsorted_list}")
+
+#############################################################################
+
+
+# --- Python Tuples Comprehensive Guide ---
+
+# 1. Create a Tuple (Uses parentheses () instead of brackets [])
+# Can store different data types
+my_tuple = (1, 2, 3, 4, 'Five', False)
+
+# 2. Accessing Elements
+print(f"Full tuple: {my_tuple}")
+print(f"Element at index 4: {my_tuple[4]}")  # Five
+
+# Negative Indexing (Starts from the end)
+print(f"Second from the end: {my_tuple[-2]}") # False
+
+# 3. Slicing [start:stop] - Note: 'stop' index is exclusive!
+# Takes index 0, 1, 2, 3 (Stops before index 4)
+print(f"Slicing [0:4]: {my_tuple[0:4]}") # (1, 2, 3, 4)
+
+
+
+# 4. Tuple Unpacking
+# "Unpack" the tuple into individual variables
+a, b, c, d, e, f = my_tuple
+print(f"Unpacked variables: a={a}, b={b}, e={e}")
+
+# 5. Immutability - WHY we use Tuples
+# Unlike Lists, you CANNOT change a tuple's elements.
+# The code below would cause a TypeError:
+# my_tuple[2] = 3.1  <-- This will fail!
+
+# 6. Useful Tuple Methods
+# Tuples have only 2 built-in methods because they can't be changed:
+
+test_tuple = (1, 2, 3, 2, 2, 4)
+
+# count() - How many times a value appears
+print(f"How many times 2 appears: {test_tuple.count(2)}") # 3
+
+# index() - Find the first index of a value
+print(f"First index of value 3: {test_tuple.index(3)}")    # 2
+
+# 7. Tuple Operations
+T1 = (1, 2, 3)
+T2 = (4, 5, 6)
+
+print(f"Concatenation: {T1 + T2}") # Combines into a new tuple
+print(f"Length of tuple: {len(T1)}") # 3
+print(f"Membership: {2 in T1}")     # True
+
+# --- Pro Tip: When to use a Tuple over a List? ---
+# 1. Performance: Tuples are slightly faster than lists.
+# 2. Safety: Use tuples for data that should NEVER change (e.g., (IP, Port) of a server).
+# 3. Dictionary Keys: Tuples can be used as keys in a dictionary, Lists cannot.
+
+
