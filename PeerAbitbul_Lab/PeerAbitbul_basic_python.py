@@ -342,4 +342,4 @@ x = mone_x / makhane
 y = mone_y / makhane
 
 print(f"The solution is: x={x}, y={y}")
-פקקר
+    
