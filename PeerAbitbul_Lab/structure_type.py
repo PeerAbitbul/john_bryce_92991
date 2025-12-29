@@ -246,3 +246,101 @@ print(f"Difference (set1 - set2): {set1 - set2}") # {1, 2, 3, 4}
 #    If you have millions of items (like Blacklisted IPs), ALWAYS use a Set for lookups.
 # 3. Comparing Datasets:
 #    Easily find missing records between two tables (e.g., ID_Set_TableA - ID_Set_TableB).
+
+##################################
+
+# --- Python Strings Comprehensive Guide ---
+
+# 1. Create a String
+# You can use single '' or double "" quotes (Result is the same)
+my_string_single_quoted = "Hello, Peer Abitbul!"
+my_string_double_quoted = "Hello, Peer Abitbul!"
+print(f"This is single quoted: {my_string_single_quoted}")
+print(f"This is double quoted: {my_string_double_quoted}")
+
+# 2. Accessing & Slicing
+# Strings are sequences, just like Lists.
+print(f"Length of string: {len(my_string_single_quoted)}")
+print(f"First character: {my_string_single_quoted[0]}")
+print(f"Last character: {my_string_single_quoted[-1]}")
+
+# Slicing [start:stop] (Stop is exclusive)
+print(f"Slicing [7:11]: {my_string_single_quoted[7:11]}")  # Peer
+print(f"Slicing [0:5]: {my_string_single_quoted[0:5]}")    # Hello
+print(f"Slicing [::-1] (Reversed): {my_string_single_quoted[::-1]}")  # !lubitA reeP ,olleH
+
+# 3. String Operations
+connecting_strings = "Hello, " + "Peer!"
+print(f"Concatenated string: {connecting_strings}")
+
+repeated_string = "Ha" * 3
+print(f"Repeated string: {repeated_string}")
+
+# Membership Test (in / not in)
+print(f"Is 'Peer' in string? {'Peer' in my_string_single_quoted}")
+print(f"Is 'Python' not in string? {'Python' not in my_string_single_quoted}")
+
+# 4. Useful Methods (Data Cleaning)
+# Changing Case
+upper_string = my_string_single_quoted.upper()
+lower_string = my_string_single_quoted.lower()
+print(f"Uppercase: {upper_string}")
+print(f"Lowercase: {lower_string}")
+
+# Replace & Strip (Trimming whitespace)
+replace_string = my_string_single_quoted.replace("Peer", "Python")
+print(f"Replaced string: {replace_string}")
+
+trimmed_string = "   Hello, Peer!   ".strip()
+print(f"Trimmed string: '{trimmed_string}'")
+
+# 5. Analysis & Splitting
+# split() turns String -> List
+split_string = my_string_single_quoted.split(", ")
+print(f"Split string: {split_string}") # ['Hello', 'Peer Abitbul!']
+
+# find() & count()
+find_index = my_string_single_quoted.find("Abitbul")
+print(f"Index of 'Abitbul': {find_index}")
+
+count_substring = my_string_single_quoted.count("e")
+print(f"Count of 'e': {count_substring}")
+
+# 6. Special String Types
+
+# Multiline String (""") - Great for Documentation or SQL
+multi_line_string = """This is a multi-line string.
+It can span multiple lines.
+Useful for documentation or large text blocks."""
+print("Multi-line string:")
+print(multi_line_string)
+
+# Escaping (\)
+# \n = New Line, \t = Tab, \" = Quote inside quote
+string_with_quotes = 'He said, "Hello, Peer!" and didn\'t stop.'
+print(f"String with quotes: {string_with_quotes}")
+
+string_with_escape = "First Line\nSecond Line\tTabbed"
+print("String with escape sequences:")
+print(string_with_escape)
+
+# Raw String (r"") - Ignores escape characters
+raw_string = r"C:\Users\Peer\Documents"
+print(f"Raw string: {raw_string}")
+
+
+# --- Pro Tip: Strings for DBAs & Data Engineers ---
+
+# 1. Raw Strings (r"path"): 
+#    ALWAYS use r"C:\Path\To\File" for Windows file paths. 
+#    Without 'r', Python thinks "\U" in "\Users" is a unicode escape and will crash.
+# 2. Multiline for SQL:
+#    Use triple quotes (""") to write clean SQL queries inside Python:
+#    query = """
+#    SELECT * FROM Users
+#    WHERE Age > 30
+#    """
+# 3. f-strings:
+#    The fastest and most readable way to inject variables into strings.
+#    Instead of: "Hello " + name + ", age: " + str(age)
+#    Use: f"Hello {name}, age: {age}"
